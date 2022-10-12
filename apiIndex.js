@@ -7,7 +7,7 @@ const gasABI = require('./gas.json')
 const WSS = "https://goerli.infura.io/v3/ee6cfbccf40e427c9c1062066cb3a7b6"
 var provider = new ethers.providers.JsonRpcProvider(WSS);
 
-const gasAddress = '0x1896b6eC0D75198803Fc9877124C25D82f8f4A4b';
+const gasAddress = '0x33a20929c49c7dda3948409957be8826f2218b65';
 const mine = process.env.privatekey
 
 let wallet = new ethers.Wallet(mine, provider);
