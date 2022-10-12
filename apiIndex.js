@@ -31,10 +31,12 @@ app.listen(process.env.PORT || 3000, () => {
 app.get('/estimateGas', async function (req, res) {
 	const key = req.query.gas;
 	const obKeys = JSON.parse(key)
+	console.log('debug key', key, obKeys)
 	var elements = []
 	for (let i = 0; i < obKeys.length; i++) {
 		elements.push(obKeys[i]);
 	}
+	console.log('debug ele', elements)
 	gasContract.storeGas(elements);
 	console.log('debug end')
 	res.send("success")
